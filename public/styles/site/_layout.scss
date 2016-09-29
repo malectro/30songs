@@ -28,7 +28,9 @@ nav.main-nav {
   flex: 0 0 auto;
   width: 340px;
   padding: 40px 20px;
-  background: red;
-  color: white;
+  background: $color-yellow;
+  color: $color-blue;
+  font-size: 24px;
+  font-weight: 800;
 }
 

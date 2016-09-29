@@ -13,14 +13,14 @@
 .song-artist {
   text-transform: uppercase;
   font-weight: 800;
-  color: red;
+  color: $color-red;
   font-size: 64px;
   margin: 0;
 }
 
 .song-title {
   font-weight: 800;
-  color: blue;
+  color: $color-blue;
   font-size: 64px;
   margin: 0;
 }

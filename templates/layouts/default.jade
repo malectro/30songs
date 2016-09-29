@@ -26,6 +26,10 @@ html
       script(src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js")
     //-[endif]
 
+    //- Typekit
+    script(src='https://use.typekit.net/aar7qdk.js')
+    script try{Typekit.load({async: true});}catch(e){}
+
     //- Include template-specific stylesheets by extending the css block
     block css
 
@@ -40,6 +44,11 @@ html
         block content
 
         nav.main-nav
+          if song
+            if song.number < songs.length
+              a(href=`/songs/${song.number + 1}`) Next
+            if song.number > 1
+              a(href=`/songs/${song.number - 1}`) Previous
           each navLink in navLinks
             div: a(href=navLink.url)= navLink.name
 

@@ -26,8 +26,10 @@ nav.main-nav {
   flex: 0 0 auto;
   width: 340px;
   padding: 40px 20px;
-  background: red;
-  color: white; }
+  background: #FFC20E;
+  color: #00344D;
+  font-size: 24px;
+  font-weight: 800; }
 
 .song {
   flex-flow: column;
@@ -42,13 +44,13 @@ nav.main-nav {
 .song-artist {
   text-transform: uppercase;
   font-weight: 800;
-  color: red;
+  color: #EF4123;
   font-size: 64px;
   margin: 0; }
 
 .song-title {
   font-weight: 800;
-  color: blue;
+  color: #00344D;
   font-size: 64px;
   margin: 0; }
 

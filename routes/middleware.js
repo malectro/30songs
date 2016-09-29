@@ -8,6 +8,7 @@
  * modules in your project's /lib directory.
  */
 var _ = require('lodash');
+var keystone = require('keystone');
 
 
 /**
@@ -18,12 +19,42 @@ var _ = require('lodash');
 	or replace it with your own templates / logic.
 */
 exports.initLocals = function (req, res, next) {
-	res.locals.navLinks = [
-		{ label: 'Home', key: 'home', href: '/' },
-		{ label: 'Blog', key: 'blog', href: '/blog' },
-	];
-	res.locals.user = req.user;
-	next();
+  var locals = res.locals;
+
+  locals.user = req.user;
+
+  keystone.list('NavLink').model.find().sort('order').exec(function (err, results) {
+    if (err) {
+      return next(err);
+    }
+
+    locals.navLinks = results;
+    next();
+  });
+};
+
+exports.initSongs = function (req, res, next) {
+  var locals = res.locals;
+
+  keystone.list('Song').model.find({
+    state: 'published',
+  }).sort('number').exec(function (err, results) {
+    if (err || !results.length) {
+      return next(err);
+    }
+
+    locals.songs = results;
+    locals.latestSong = _.last(results);
+    next();
+  });
+}
+
+exports.initErrorHandlers = function (req, res, next) {
+  res.notFound = function () {
+    res.status(404).render('errors/404');
+  };
+
+  next();
 };
 
 

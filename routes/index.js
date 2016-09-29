@@ -23,7 +23,9 @@ var middleware = require('./middleware');
 var importRoutes = keystone.importer(__dirname);
 
 // Common Middleware
+keystone.pre('routes', middleware.initErrorHandlers);
 keystone.pre('routes', middleware.initLocals);
+keystone.pre('routes', middleware.initSongs);
 keystone.pre('render', middleware.flashMessages);
 
 // Import Route Controllers
@@ -35,6 +37,7 @@ var routes = {
 exports = module.exports = function (app) {
 	// Views
 	app.get('/', routes.views.index);
+  app.get('/songs/:number', routes.views.song);
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
 
