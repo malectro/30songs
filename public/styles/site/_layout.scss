@@ -1,0 +1,34 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+.main div {
+  display: inherit;
+}
+
+.main-wrapper {
+  max-width: 1000px;
+  flex: 1 0 0;
+}
+
+nav.main-nav {
+  flex: 0 0 auto;
+  width: 340px;
+  padding: 40px 20px;
+  background: red;
+  color: white;
+}
+

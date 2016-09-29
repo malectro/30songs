@@ -1,0 +1,93 @@
+@charset "UTF-8";
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.main {
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+  font-family: 'Helvetica Neue', sans-serif; }
+
+.main div {
+  display: inherit; }
+
+.main-wrapper {
+  max-width: 1000px;
+  flex: 1 0 0; }
+
+nav.main-nav {
+  flex: 0 0 auto;
+  width: 340px;
+  padding: 40px 20px;
+  background: red;
+  color: white; }
+
+.song {
+  flex-flow: column;
+  padding: 40px 20px; }
+
+.song-day {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 24px;
+  margin: 0 0 1em; }
+
+.song-artist {
+  text-transform: uppercase;
+  font-weight: 800;
+  color: red;
+  font-size: 64px;
+  margin: 0; }
+
+.song-title {
+  font-weight: 800;
+  color: blue;
+  font-size: 64px;
+  margin: 0; }
+
+.song-title::before {
+  content: '“'; }
+
+.song-title::after {
+  content: '”'; }
+
+.song-info {
+  align-items: flex-start; }
+
+.song-info-col1 {
+  flex: 0 0 300px;
+  flex-flow: column;
+  margin-right: 20px; }
+
+.song-image {
+  width: 300px; }
+
+.song-info-col2 {
+  flex: 1 0 0;
+  flex-flow: column;
+  font-family: serif; }
+
+.song-quote {
+  font-style: italic;
+  margin-bottom: 20px; }
+
+.song-quote::before {
+  content: '“'; }
+
+.song-quote::after {
+  content: '”'; }
+
+.song-lyrics-label {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: red; }
+
+.song-lyrics {
+  white-space: pre-wrap; }
