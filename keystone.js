@@ -20,7 +20,9 @@ keystone.init({
 	'view engine': 'jade',
 
 	'auto update': true,
+  'mongo': process.env.MONGODB_URI || 'mongodb://localhost/30songs',
 	'session': true,
+  'session store': 'mongo',
 	'auth': true,
 	'user model': 'User',
 });
