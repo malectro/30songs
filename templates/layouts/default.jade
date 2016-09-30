@@ -49,11 +49,16 @@ html
           .nav-logo-simple
 
           .nav-links
-            if song
-              if song.number < songs.length
-                a(href=`/songs/${song.number + 1}`) Next
-              if song.number > 1
-                a(href=`/songs/${song.number - 1}`) Previous
+            span.nav-song-links
+              if song
+                if song.number > 1
+                  a(href=`/${song.number - 1}`) Previous
+                if song.number < songs.length && song.number > 1
+                  span.nav-dot •
+                if song.number < songs.length
+                  a(href=`/${song.number + 1}`) Next
+              else
+                a(href='/') Latest Song
 
             .nav-stars
               - for (var i = 0; i < 6; i++)

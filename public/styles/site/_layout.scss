@@ -48,6 +48,10 @@ nav.main-nav {
   background-size: 100%;
 }
 
+.nav-dot {
+  margin: 0 10px;
+}
+
 .nav-links {
   flex-flow: column;
   padding: 20px 20px;
@@ -55,6 +59,10 @@ nav.main-nav {
   color: $color-blue;
   font-size: 16px;
   font-weight: 500;
+}
+.nav-links a:hover {
+  background: $color-blue;
+  color: white;
 }
 
 .nav-stars {
