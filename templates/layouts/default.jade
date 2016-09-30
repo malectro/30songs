@@ -12,6 +12,8 @@ html
     title= title || '30songs'
     link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
 
+    link(href='https://fonts.googleapis.com/css?family=Teko:300,400,500' rel='stylesheet')
+
     //- Customise the stylesheet for your site by editing /public/styles/site.sass
     link(href="/styles/site.css", rel="stylesheet")
 
@@ -44,13 +46,22 @@ html
         block content
 
         nav.main-nav
-          if song
-            if song.number < songs.length
-              a(href=`/songs/${song.number + 1}`) Next
-            if song.number > 1
-              a(href=`/songs/${song.number - 1}`) Previous
-          each navLink in navLinks
-            div: a(href=navLink.url)= navLink.name
+          .nav-logo-simple
+
+          .nav-links
+            if song
+              if song.number < songs.length
+                a(href=`/songs/${song.number + 1}`) Next
+              if song.number > 1
+                a(href=`/songs/${song.number - 1}`) Previous
+
+            .nav-stars
+              - for (var i = 0; i < 6; i++)
+                .nav-star.star-red
+                .nav-star.star-blue
+
+            each navLink in navLinks
+              div: a(href=navLink.url)= navLink.name
 
 
     //- JAVASCRIPT

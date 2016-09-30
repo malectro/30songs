@@ -25,12 +25,58 @@ a {
 }
 
 nav.main-nav {
+  display: flex;
   flex: 0 0 auto;
+  flex-flow: column;
   width: 340px;
-  padding: 40px 20px;
+  margin: 20px 20px;
+}
+
+.nav-logo {
+  height: 466px;
+  width: 340px;
+  margin-bottom: 20px;
+  background: url(/images/logo.svg);
+  background-size: 100%;
+}
+
+.nav-logo-simple {
+  height: 242px;
+  width: 340px;
+  margin-bottom: 20px;
+  background: url(/images/logo-simple.svg);
+  background-size: 100%;
+}
+
+.nav-links {
+  flex-flow: column;
+  padding: 20px 20px;
   background: $color-yellow;
   color: $color-blue;
-  font-size: 24px;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-stars {
+  height: 20px;
+  margin: 10px 0;
+}
+.nav-star {
+  flex: 1 0 0;
+  margin: 0 5px;
+  background: no-repeat;
+  background-size: 100%;
+}
+.nav-star:first-child {
+  margin-left: 0;
+}
+.nav-star:last-child {
+  margin-right: 0;
+}
+.nav-star.star-blue {
+  background-image: url(/images/star-blue.svg);
+}
+.nav-star.star-red {
+  background-image: url(/images/star-red.svg);
 }
 

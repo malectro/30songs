@@ -7,22 +7,27 @@
   text-transform: uppercase;
   font-weight: 800;
   font-size: 24px;
-  margin: 0 0 1em;
+  margin: 0;
+}
+
+.song-artist, .song-title {
+  font-family: 'Teko', sans-serif;
+  font-weight: 800;
+  font-size: 92px;
+  line-height: 1;
+  letter-spacing: 2px;
 }
 
 .song-artist {
   text-transform: uppercase;
-  font-weight: 800;
   color: $color-red;
-  font-size: 64px;
   margin: 0;
 }
 
 .song-title {
-  font-weight: 800;
-  color: $color-blue;
-  font-size: 64px;
   margin: 0;
+  font-style: italic;
+  color: $color-blue;
 }
 .song-title::before {
   content: '“';
@@ -31,31 +36,43 @@
   content: '”';
 }
 
+.song-widget {
+  margin: 29px 0 20px;
+}
 
 .song-info {
   align-items: flex-start;
+  font-size: 16px;
+  line-height: 1.25;
 }
 
 .song-info-col1 {
-  flex: 0 0 300px;
+  flex: 0 0 220px;
   flex-flow: column;
-  margin-right: 20px;
+  margin-right: 40px;
 }
 .song-image {
-  width: 300px;
+  width: 220px;
+  margin-top: 10px;
 }
 .song-bio {
-  
+  margin-top: 20px;
+  line-height: 1.25;
+  font-size: 14px;
+  font-family: $font-serif;
+  background: $color-yellow;
+  padding: 20px;
 }
 
 .song-info-col2 {
   flex: 1 0 0;
   flex-flow: column;
-  font-family: serif;
+  font-family: $font-serif;
 }
 .song-quote {
+  margin: 10px 0 20px;
+  font-size: 22px;
   font-style: italic;
-  margin-bottom: 20px;
 }
 .song-quote::before {
   content: '“';
@@ -65,9 +82,10 @@
 }
 
 .song-lyrics-label {
-  text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 22px;
   color: red;
+  text-transform: uppercase;
 }
 .song-lyrics {
   white-space: pre-wrap;

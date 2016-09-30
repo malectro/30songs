@@ -6,7 +6,7 @@ block content
     h2.song-artist= song.artist
     h1.song-title= song.title
 
-    iframe(src='https://embed.spotify.com/?uri='+song.spotifyUrl height=80 frameborder=0 allowtransparency='true')
+    iframe.song-widget(src='https://embed.spotify.com/?uri='+song.spotifyUrl height=80 frameborder=0 allowtransparency='true')
 
     .song-info
       .song-info-col1
