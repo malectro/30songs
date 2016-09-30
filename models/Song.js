@@ -11,6 +11,7 @@ Song.add({
   title: {type: String, required: true},
   number: {type: Number, required: true, initial: true},
   artist: {type: String, required: true, initial: true},
+  spotifyUrl: {type: String},
   image: {
     type: Types.S3File,
     allowedTypes: ['image/png', 'image/jpeg', 'image/gif'],
