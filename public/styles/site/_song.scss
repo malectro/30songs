@@ -18,6 +18,7 @@
   font-size: 92px;
   line-height: 1;
   letter-spacing: 2px;
+  overflow-wrap: break-word;
 }
 
 .song-artist {
@@ -109,8 +110,6 @@
 @media(max-width: 500px) {
   .song-artist, .song-title {
     font-size: 64px;
-    overflow-wrap: break-word;
-    min-width: 0;
   }
 }
 

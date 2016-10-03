@@ -117,7 +117,8 @@ nav.main-nav {
   font-weight: 800;
   font-size: 92px;
   line-height: 1;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  overflow-wrap: break-word; }
 
 .song-artist {
   text-transform: uppercase;
@@ -196,9 +197,7 @@ nav.main-nav {
 
 @media (max-width: 500px) {
   .song-artist, .song-title {
-    font-size: 64px;
-    overflow-wrap: break-word;
-    min-width: 0; } }
+    font-size: 64px; } }
 
 .main .page {
   display: block;
