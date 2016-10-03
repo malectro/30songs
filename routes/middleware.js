@@ -84,3 +84,17 @@ exports.requireUser = function (req, res, next) {
 		next();
 	}
 };
+
+
+exports.userOr404 = function (req, res, next) {
+	if (!req.user) {
+    res.notFound();
+	} else {
+		next();
+	}
+};
+
+exports.notFound = function (req, res) {
+  res.status(404).render('404');
+}
+

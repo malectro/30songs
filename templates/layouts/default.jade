@@ -46,28 +46,29 @@ html
         .main-content
           block content
 
-        nav.main-nav
-          img.nav-logo-img(src='/images/logo-simple.svg')
+        block nav
+          nav.main-nav
+            img.nav-logo-img(src='/images/logo-simple.svg')
 
-          .nav-links
-            span.nav-song-links
-              if song
-                if song.number > 1
-                  a(href=`/${song.number - 1}`) Previous
-                if song.number < songs.length && song.number > 1
-                  span.nav-dot •
-                if song.number < songs.length
-                  a(href=`/${song.number + 1}`) Next
-              else
-                a(href='/') Latest Song
+            .nav-links
+              span.nav-song-links
+                if song
+                  if song.number > 1
+                    a(href=`/${song.number - 1}`) Previous
+                  if song.number < songs.length && song.number > 1
+                    span.nav-dot •
+                  if song.number < songs.length
+                    a(href=`/${song.number + 1}`) Next
+                else
+                  a(href='/') Latest Song
 
-            .nav-stars
-              - for (var i = 0; i < 6; i++)
-                .nav-star.star-red
-                .nav-star.star-blue
+              .nav-stars
+                - for (var i = 0; i < 6; i++)
+                  .nav-star.star-red
+                  .nav-star.star-blue
 
-            each navLink in navLinks
-              div: a(href=navLink.url)= navLink.name
+              each navLink in navLinks
+                div: a(href=navLink.url)= navLink.name
 
 
     //- JAVASCRIPT

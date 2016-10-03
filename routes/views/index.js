@@ -9,6 +9,6 @@ exports = module.exports = function (req, res) {
   locals.day = parseInt(locals.song.day, 10);
 
 	// Render the view
-	view.render('song');
+	view.render('index');
 };
 
