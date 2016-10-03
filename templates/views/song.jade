@@ -1,0 +1,22 @@
+extends ../layouts/default
+
+block content
+  .song
+    .song-day Day #{song.number}, Song #{song.number}
+    h2.song-artist= song.artist
+    h1.song-title= song.title
+
+    iframe.song-widget(src='https://embed.spotify.com/?uri='+song.spotifyUrl height=80 frameborder=0 allowtransparency='true')
+
+    .song-info
+      .song-info-col1
+        img.song-image(src=song.image.url)
+        p.song-bio= song.bio
+
+      .song-info-col2
+        p.song-quote= song.quote
+
+        .song-lyrics-label Lyrics
+        p.song-lyrics= song.lyrics
+
+

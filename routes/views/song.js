@@ -12,6 +12,6 @@ exports = module.exports = function (req, res, next) {
 
 	// Render the view
 	var view = new keystone.View(req, res);
-	view.render('index');
+	view.render('song');
 };
 
