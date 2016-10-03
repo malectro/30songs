@@ -13,6 +13,7 @@ a {
   display: flex;
   justify-content: center;
   min-height: 100%;
+  min-width: 0;
   font-family: 'Helvetica Neue', sans-serif;
 }
 .main div {
@@ -21,15 +22,27 @@ a {
 
 .main-wrapper {
   max-width: 1000px;
+  min-width: 0;
   flex: 1 0 0;
+  justify-content: space-between;
+}
+
+.main-content {
+  flex: 2 0 0;
+  min-width: 0;
 }
 
 nav.main-nav {
   display: flex;
-  flex: 0 0 auto;
+  flex: 1 0 0;
   flex-flow: column;
-  width: 340px;
+  max-width: 340px;
+  min-width: 240px;
   margin: 20px 20px;
+}
+
+.nav-logo-img {
+  margin-bottom: 20px;
 }
 
 .nav-logo {
@@ -86,5 +99,19 @@ nav.main-nav {
 }
 .nav-star.star-red {
   background-image: url(/images/star-red.svg);
+}
+
+
+@media(max-width: 664px) {
+  .main-wrapper {
+    flex-flow: column;
+  }
+  .main-content {
+    flex: 0 0 auto;
+  }
+  nav.main-nav {
+    flex: 0 0 auto;
+    max-width: none;
+  }
 }
 

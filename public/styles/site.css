@@ -13,6 +13,7 @@ a {
   display: flex;
   justify-content: center;
   min-height: 100%;
+  min-width: 0;
   font-family: 'Helvetica Neue', sans-serif; }
 
 .main div {
@@ -20,14 +21,24 @@ a {
 
 .main-wrapper {
   max-width: 1000px;
-  flex: 1 0 0; }
+  min-width: 0;
+  flex: 1 0 0;
+  justify-content: space-between; }
+
+.main-content {
+  flex: 2 0 0;
+  min-width: 0; }
 
 nav.main-nav {
   display: flex;
-  flex: 0 0 auto;
+  flex: 1 0 0;
   flex-flow: column;
-  width: 340px;
+  max-width: 340px;
+  min-width: 240px;
   margin: 20px 20px; }
+
+.nav-logo-img {
+  margin-bottom: 20px; }
 
 .nav-logo {
   height: 466px;
@@ -80,9 +91,19 @@ nav.main-nav {
 .nav-star.star-red {
   background-image: url(/images/star-red.svg); }
 
+@media (max-width: 664px) {
+  .main-wrapper {
+    flex-flow: column; }
+  .main-content {
+    flex: 0 0 auto; }
+  nav.main-nav {
+    flex: 0 0 auto;
+    max-width: none; } }
+
 .song {
   flex-flow: column;
-  padding: 40px 20px; }
+  padding: 40px 20px;
+  min-width: 0; }
 
 .song-day {
   text-transform: uppercase;
@@ -91,6 +112,7 @@ nav.main-nav {
   margin: 0; }
 
 .song-artist, .song-title {
+  min-width: 0;
   font-family: 'Teko', sans-serif;
   font-weight: 800;
   font-size: 92px;
@@ -162,6 +184,21 @@ nav.main-nav {
 
 .song-lyrics {
   white-space: pre-wrap; }
+
+@media (max-width: 800px) {
+  .song-info {
+    flex-flow: column; }
+  .song-info-col1, .song-info-col2 {
+    flex: 1 0 auto;
+    margin: 0; }
+  .song-image {
+    align-self: center; } }
+
+@media (max-width: 500px) {
+  .song-artist, .song-title {
+    font-size: 64px;
+    overflow-wrap: break-word;
+    min-width: 0; } }
 
 .main .page {
   display: block;

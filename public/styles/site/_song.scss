@@ -1,6 +1,7 @@
 .song {
   flex-flow: column;
   padding: 40px 20px;
+  min-width: 0;
 }
 
 .song-day {
@@ -11,6 +12,7 @@
 }
 
 .song-artist, .song-title {
+  min-width: 0;
   font-family: 'Teko', sans-serif;
   font-weight: 800;
   font-size: 92px;
@@ -89,5 +91,26 @@
 }
 .song-lyrics {
   white-space: pre-wrap;
+}
+
+@media(max-width: 800px) {
+  .song-info {
+    flex-flow: column;
+  }
+  .song-info-col1, .song-info-col2 {
+    flex: 1 0 auto;
+    margin: 0;
+  }
+  .song-image {
+    align-self: center;
+  }
+}
+
+@media(max-width: 500px) {
+  .song-artist, .song-title {
+    font-size: 64px;
+    overflow-wrap: break-word;
+    min-width: 0;
+  }
 }
 
