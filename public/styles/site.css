@@ -163,10 +163,10 @@ nav.main-nav {
   content: '”'; }
 
 .splash-song-arrow {
-  width: 34px;
-  height: 82px;
-  background: url(/images/arrow.svg) no-repeat;
-  background-size: 100%; }
+  width: 28px;
+  height: 68px;
+  background: url(/images/arrow.svg) no-repeat center;
+  background-size: contain; }
 
 .splash-song:hover .splash-song-arrow {
   background-image: url(/images/arrow-star.svg); }
