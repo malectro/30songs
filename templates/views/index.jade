@@ -1,24 +1,25 @@
 extends ../layouts/default
 
 block content
-  .splash
-    .splash-logo
+  .splash-wrapper
+    .splash
+      .splash-logo
 
-    if user
-      ol.splash-songs
-        - for (let i = 0; i < 30; i++)
-          - song = songs[i]
-          if song
-            a.splash-song(href=`/${song.number}`)
-              li.splash-song-item
-                span.splash-song-number= song.number
-                .splash-song-info
-                  span.splash-song-artist= song.artist
-                  span.splash-song-title= song.title
-                .splash-song-arrow
-          else
-            li.splash-song
-              span.splash-song-number= i + 1
+      if user
+        ol.splash-songs
+          - for (let i = 0; i < 30; i++)
+            - song = songs[i]
+            if song
+              a.splash-song(href=`/${song.number}`)
+                li.splash-song-item
+                  span.splash-song-number= song.number
+                  .splash-song-info
+                    span.splash-song-artist= song.artist
+                    span.splash-song-title= song.title
+                  .splash-song-arrow
+            else
+              li.splash-song
+                span.splash-song-number= i + 1
 
 
 block nav

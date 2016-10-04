@@ -102,6 +102,10 @@ nav.main-nav {
     flex: 0 0 auto;
     max-width: none; } }
 
+.splash-wrapper {
+  flex: 1 0 0;
+  justify-content: center; }
+
 .splash {
   flex: 1 0 0;
   flex-flow: column;
