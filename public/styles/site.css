@@ -63,7 +63,9 @@ nav.main-nav {
   background: #FFC20E;
   color: #00344D;
   font-size: 16px;
-  font-weight: 500; }
+  font-weight: 500;
+  border: 2px solid blue;
+  border-image: url(/images/border.png) 10; }
 
 .nav-links a:hover {
   background: #00344D;
@@ -100,12 +102,90 @@ nav.main-nav {
     flex: 0 0 auto;
     max-width: none; } }
 
-.splash-logo {
+.splash {
   flex: 1 0 0;
-  max-width: 900px;
+  flex-flow: column;
+  max-width: 900px; }
+
+.splash-logo {
+  flex: 0 0 auto;
+  height: 70vh;
   margin: 20px;
   background: url(/images/logo.svg) center no-repeat;
   background-size: contain; }
+
+.splash-songs {
+  display: inherit;
+  align-self: center;
+  flex-flow: row wrap;
+  align-items: center;
+  list-style-type: none;
+  padding: 0; }
+
+.splash-song {
+  display: inherit;
+  width: 410px;
+  margin: 0 20px 20px; }
+
+.splash-song-item {
+  display: inherit;
+  flex: 1 0 0;
+  align-items: flex-start; }
+
+.splash-song-number {
+  font-family: "Teko", sans-serif;
+  font-size: 64px;
+  font-weight: bold;
+  line-height: 1;
+  color: #00344D; }
+
+.splash-song-info {
+  margin: 0 20px;
+  flex: 1 0 0;
+  flex-flow: column; }
+
+.splash-song-title, .splash-song-artist {
+  font-family: Georgia, serif;
+  font-size: 24px;
+  font-weight: bold; }
+
+.splash-song-artist {
+  color: #EF4123; }
+
+.splash-song-title {
+  font-style: italic;
+  color: #00344D; }
+
+.splash-song-title::before {
+  content: '“'; }
+
+.splash-song-title::after {
+  content: '”'; }
+
+.splash-song-arrow {
+  width: 34px;
+  height: 82px;
+  background: url(/images/arrow.svg) no-repeat;
+  background-size: 100%; }
+
+.splash-song:hover .splash-song-arrow {
+  background-image: url(/images/arrow-star.svg); }
+
+@media (max-width: 900px) {
+  .splash-songs {
+    flex-flow: column;
+    align-items: stretch;
+    max-width: 400px; }
+  .splash-song {
+    margin: 0 0 20px;
+    width: 400px; } }
+
+@media (max-width: 400px) {
+  .splash-songs {
+    align-self: stretch;
+    padding: 0 20px; }
+  .splash-song {
+    width: initial; } }
 
 .song {
   flex-flow: column;
@@ -120,7 +200,7 @@ nav.main-nav {
 
 .song-artist, .song-title {
   min-width: 0;
-  font-family: 'Teko', sans-serif;
+  font-family: "Teko", sans-serif;
   font-weight: 800;
   font-size: 92px;
   line-height: 1;

@@ -1,7 +1,18 @@
 extends ../layouts/default
 
 block content
-  .splash-logo
+  .splash
+    .splash-logo
+
+    ol.splash-songs
+      each song in songs
+        a.splash-song(href=`/${song.number}`)
+          li.splash-song-item
+            span.splash-song-number= song.number
+            .splash-song-info
+              span.splash-song-artist= song.artist
+              span.splash-song-title= song.title
+            .splash-song-arrow
 
 block nav
   .empty
