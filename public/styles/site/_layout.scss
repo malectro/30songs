@@ -72,13 +72,15 @@ nav.main-nav {
   color: $color-blue;
   font-size: 16px;
   font-weight: 500;
-
-  border: 2px solid blue;
-  border-image: url(/images/border.png) 10;
+  line-height: 1.25;
 }
 .nav-links a:hover {
   background: $color-blue;
   color: white;
+}
+
+.nav-link {
+  margin-bottom: 5px;
 }
 
 .nav-stars {
