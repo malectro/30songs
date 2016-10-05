@@ -229,8 +229,11 @@ nav.main-nav {
 .song-title::after {
   content: '”'; }
 
+.song-video {
+  margin: 20px 0 0; }
+
 .song-widget {
-  margin: 29px 0 20px; }
+  margin: 20px 0 20px; }
 
 .song-info {
   align-items: flex-start;

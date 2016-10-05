@@ -13,6 +13,8 @@ block content
     h2.song-artist= song.artist
     h1.song-title= song.title
 
+    if song.youtubeId
+      iframe.song-video(src='https://www.youtube.com/embed/'+song.youtubeId height=340 frameborder=0)
     iframe.song-widget(src='https://embed.spotify.com/?uri='+song.spotifyUrl height=80 frameborder=0 allowtransparency='true')
 
     .song-info
