@@ -7,9 +7,33 @@
  * you have more middleware you may want to group it as separate
  * modules in your project's /lib directory.
  */
+var cache = require('memory-cache');
 var _ = require('lodash');
 var keystone = require('keystone');
 
+
+function getAllData() {
+  return new Promise((resolve, reject) => {
+    const data = cache.get('all-data');
+
+    if (data) {
+      return resolve(data);
+    }
+
+    Promise.all([
+      keystone.list('NavLink').model.find().sort('order').exec(),
+      keystone.list('Song').model.find({
+        state: 'published',
+      }).sort('number').exec(),
+      keystone.list('Page').model.findOne({
+        slug: 'about',
+      }).exec(),
+    ]).then(data => {
+      cache.put('all-data', data, 1000);
+      resolve(data);
+    }).catch(reject);
+  });
+}
 
 /**
 	Initialises the standard view locals
@@ -23,16 +47,7 @@ exports.initLocals = function (req, res, next) {
 
   locals.user = req.user;
 
-  Promise.all([
-    keystone.list('NavLink').model.find().sort('order').exec(),
-    keystone.list('Song').model.find({
-      state: 'published',
-    }).sort('number').exec(),
-    keystone.list('Page').model.findOne({
-      slug: 'about',
-    }).exec(),
-
-  ]).then(([links, songs, aboutPage]) => {
+  getAllData().then(([links, songs, aboutPage]) => {
     locals.navLinks = links;
     locals.songs = songs;
     locals.latestSong = _.last(songs);
