@@ -10,7 +10,7 @@ var Page = new keystone.List('Page', {
 Page.add({
   title: {type: String, required: true},
   slug: {type: String, required: true, initial: true},
-  description: {type: Types.Textarea, height: 100},
+  description: {type: Types.Textarea, height: 100, note: 'Description is totally optional. Only necessary for the About page.'},
   content: {type: Types.Markdown, height: 200},
 });
 

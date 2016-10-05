@@ -1,3 +1,4 @@
+var url = require('url');
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
@@ -11,6 +12,11 @@ Song.add({
   title: {type: String, required: true},
   number: {type: Number, required: true, initial: true},
   artist: {type: String, required: true, initial: true},
+  youtubeUrl: {type: Types.Url},
+  youtubeId: {type: String, watch: 'youtubeUrl', noedit: true, value: function () {
+    const youtubeUrl = url.parse(this.youtubeUrl, true);
+    return youtubeUrl.query.v;
+  }},
   spotifyUrl: {type: String},
   image: {
     type: Types.S3File,
