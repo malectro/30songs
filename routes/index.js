@@ -37,7 +37,7 @@ var routes = {
 exports = module.exports = function (app) {
 	// Views
 	app.get('/', routes.views.index);
-  app.get('/:number', routes.views.song);
+  app.get('/:number', middleware.userOr404, routes.views.song);
   app.get('/:slug', middleware.userOr404, routes.views.page);
 
   /*
