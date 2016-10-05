@@ -3,7 +3,7 @@ extends ../layouts/default
 block openGraph
   meta(property='og:title' content=song.title)
   meta(property='og:type' content='music.song')
-  meta(property='og:url' content=`http://www.30days30songs.com/${song.number}`)
+  meta(property='og:url' content='http://www.30days30songs.com/'+song.number)
   meta(property='og:image' content=song.image.url || 'http://www.30days30songs.com/images/logo.png')
   meta(property='og:description' content=aboutText)
 
