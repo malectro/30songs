@@ -23,31 +23,26 @@ exports.initLocals = function (req, res, next) {
 
   locals.user = req.user;
 
-  keystone.list('NavLink').model.find().sort('order').exec(function (err, results) {
-    if (err) {
-      return next(err);
-    }
+  Promise.all([
+    keystone.list('NavLink').model.find().sort('order').exec(),
+    keystone.list('Song').model.find({
+      state: 'published',
+    }).sort('number').exec(),
+    keystone.list('Page').model.findOne({
+      slug: 'about',
+    }).exec(),
 
-    locals.navLinks = results;
+  ]).then(([links, songs, aboutPage]) => {
+    locals.navLinks = links;
+    locals.songs = songs;
+    locals.latestSong = _.last(songs);
+    locals.aboutText = (aboutPage && aboutPage.description) || '30 days 30 songs is a playlist of songs written and recorded by musicians for a Trump-free America.';
     next();
+
+  }).catch(error => {
+    next(error);
   });
 };
-
-exports.initSongs = function (req, res, next) {
-  var locals = res.locals;
-
-  keystone.list('Song').model.find({
-    state: 'published',
-  }).sort('number').exec(function (err, results) {
-    if (err || !results.length) {
-      return next(err);
-    }
-
-    locals.songs = results;
-    locals.latestSong = _.last(results);
-    next();
-  });
-}
 
 exports.initErrorHandlers = function (req, res, next) {
   res.notFound = function () {

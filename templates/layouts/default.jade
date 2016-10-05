@@ -9,7 +9,16 @@ html
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
 
-    title= title || '30songs'
+    title= title || '30 Days 30 Songs'
+
+    block openGraph
+      meta(property='og:title' content='30 Days 30 Songs')
+      meta(property='og:type' content='website')
+      meta(property='og:url' content='http://www.30days30songs.com')
+      meta(property='og:image' content='http://www.30days30songs.com/images/logo.png')
+      meta(property='og:description' content=aboutText)
+    meta(property='og:site_name' content='30 Days 30 Songs')
+
     //- link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
     link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
     link(rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32")
