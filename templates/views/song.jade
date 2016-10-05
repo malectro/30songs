@@ -1,5 +1,17 @@
 extends ../layouts/default
 
+block openGraph
+  meta(property='og:title' content=song.title)
+  meta(property='og:type' content='music.song')
+  meta(property='og:url' content=`http://www.30days30songs.com/${song.number}`)
+  meta(property='og:image' content=song.image.url || 'http://www.30days30songs.com/images/logo.png')
+  meta(property='og:description' content=aboutText)
+
+  meta(property='og:music:album' content='30 Days 30 Songs')
+  meta(property='og:music:album:track' content=song.number)
+  meta(property='og:music:musician:first_name' content=song.artist)
+
+
 block content
   .song
     .song-day Day #{song.number}, Song #{song.number}
