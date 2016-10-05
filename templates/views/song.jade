@@ -7,9 +7,9 @@ block openGraph
   meta(property='og:image' content=(song.image.url && 'http:'+song.image.url) || 'http://www.30days30songs.com/images/logo.png')
   meta(property='og:description' content=aboutText)
 
-  meta(property='og:music:album' content='30 Days 30 Songs')
-  meta(property='og:music:album:track' content=song.number)
-  meta(property='og:music:musician:first_name' content=song.artist)
+  meta(property='music:album' content='30 Days 30 Songs')
+  meta(property='music:album:track' content=song.number)
+  meta(property='music:musician:first_name' content=song.artist)
 
 
 block content
