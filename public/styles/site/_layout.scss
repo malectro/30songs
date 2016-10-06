@@ -103,10 +103,10 @@ nav.main-nav {
 
 .nav-links {
   flex-flow: column;
-  padding: 20px 20px;
+  padding: 16px 20px;
   background-color: $color-yellow;
   color: $color-blue;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 1.25;
 }
@@ -116,7 +116,7 @@ nav.main-nav {
 }
 
 .nav-link {
-  margin-bottom: 5px;
+  padding: 4px 0;
 }
 
 .nav-stars {
