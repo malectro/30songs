@@ -85,13 +85,15 @@ nav.main-nav {
 }
 
 .nav-arrow-left, .nav-arrow-right {
-  background: url(/images/arrow-back.svg) no-repeat;
+  background: no-repeat;
+  background-image: url(/images/arrow-back.svg), url(/images/arrow-back-star.svg);
+  background-position: center, -100px;
   background-size: contain;
   width: 30px;
   cursor: pointer;
 }
 .nav-arrow-right {
-  background-image: url(/images/arrow.svg);
+  background-image: url(/images/arrow.svg), url(/images/arrow-star.svg);
 }
 .nav-arrow-left:hover {
   background-image: url(/images/arrow-back-star.svg);

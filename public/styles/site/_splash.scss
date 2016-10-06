@@ -76,7 +76,9 @@
 .splash-song-arrow {
   width: 28px;
   height: 68px;
-  background: url(/images/arrow-back.svg) no-repeat center;
+  background: no-repeat;
+  background-image: url(/images/arrow-back.svg), url(/images/arrow-back-star.svg);
+  background-position: center, -1000px;
   background-size: contain;
 }
 .splash-song:hover .splash-song-arrow {
