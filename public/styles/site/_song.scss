@@ -77,15 +77,19 @@
   font-family: $font-serif;
 }
 .song-quote {
+  position: relative;
   margin: 10px 0 20px;
+  padding: 20px 0 0 50px;
   font-size: 22px;
   font-style: italic;
 }
 .song-quote::before {
   content: '“';
-}
-.song-quote::after {
-  content: '”';
+  position: absolute;
+  left: -10px;
+  top: -25px;
+  font-size: 120px;
+  color: #efefef;
 }
 
 .song-lyrics-label {
