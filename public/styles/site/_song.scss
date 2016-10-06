@@ -60,7 +60,11 @@
 }
 .song-image {
   width: 220px;
+  height: 220px;
+  background: center;
+  background-size: cover;
   margin-top: 10px;
+  border-radius: 50%;
 }
 .song-bio {
   margin-top: 20px;
