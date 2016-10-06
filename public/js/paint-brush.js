@@ -100,3 +100,25 @@ setTimeout(() => {
   });
 }, 1000);
 
+
+const footerEl = document.querySelector('footer');
+const footerRect = footerEl.getBoundingClientRect();
+const footerPivot = window.scrollY + footerRect.top - window.innerHeight;
+const navEl = document.querySelector('.nav-fixed');
+
+let pinned = false;
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  if (pinned) {
+    if (y < footerPivot) {
+      pinned = false;
+      navEl.classList.remove('unpin');
+    }
+  } else {
+    if (y >= footerPivot) {
+      pinned = true;
+      navEl.classList.add('unpin');
+    }
+  }
+});
+

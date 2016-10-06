@@ -46,6 +46,10 @@ a {
   height: 100vh;
   align-items: center;
 }
+.nav-fixed.unpin {
+  position: absolute;
+  bottom: 0;
+}
 
 nav.main-nav {
   display: flex;
@@ -108,7 +112,7 @@ nav.main-nav {
 }
 
 .nav-links {
-  flex: 1 0 0;
+  flex: 1 0 auto;
   flex-flow: column;
   padding: 16px 20px;
   background-color: $color-yellow;
@@ -181,7 +185,7 @@ nav.main-nav {
     width: auto;
     margin: 20px 0;
   }
-  .nav-fixed {
+  .nav-fixed, .nav-fixed.unpin {
     position: static;
     height: auto;
     flex: 1 0 0;
