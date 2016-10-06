@@ -53,6 +53,8 @@ html(prefix='og: http://ogp.me/ns#')
     //- Add any other template-specific HEAD tags by extending the head block
     block head
 
+    script(src='/js/paint-brush.js' defer)
+
   //- HTML BODY
   body
 
@@ -66,7 +68,7 @@ html(prefix='og: http://ogp.me/ns#')
             a(href='/')
               img.nav-logo-img(src='/images/logo-simple.svg')
 
-            .nav-links
+            .nav-links.box
               span.nav-song-links
                 if song
                   if song.number > 1

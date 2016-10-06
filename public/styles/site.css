@@ -60,7 +60,7 @@ nav.main-nav {
 .nav-links {
   flex-flow: column;
   padding: 20px 20px;
-  background: #FFC20E;
+  background-color: #FFC20E;
   color: #00344D;
   font-size: 16px;
   font-weight: 500;
