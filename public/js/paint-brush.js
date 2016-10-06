@@ -86,10 +86,12 @@ function createBrushStroke(color, width, height) {
   return canvas.toDataURL();
 }
 
-Array.prototype.forEach.call(document.querySelectorAll('.box'), el => {
-  const imgSrc = createBrushStroke('rgb(255, 194, 14)', el.offsetWidth, el.offsetHeight);
-  el.style.backgroundColor = 'transparent';
-  el.style.backgroundImage = `url('${imgSrc}')`;
-  el.style.backgroundSize = '100%';
-});
+setTimeout(() => {
+  Array.prototype.forEach.call(document.querySelectorAll('.box'), el => {
+    const imgSrc = createBrushStroke('rgb(255, 194, 14)', el.offsetWidth, el.offsetHeight);
+    el.style.backgroundColor = 'transparent';
+    el.style.backgroundImage = `url('${imgSrc}')`;
+    el.style.backgroundSize = '100%';
+  });
+}, 1000);
 
