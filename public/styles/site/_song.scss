@@ -80,10 +80,11 @@
   flex-flow: column;
   font-family: $font-serif;
 }
-.song-quote {
+.main .song-quote {
+  display: block;
   position: relative;
-  margin: 10px 0 20px;
-  padding: 20px 0 0 50px;
+  margin: 10px 0 0;
+  padding: 0 0 0 50px;
   font-size: 22px;
   font-style: italic;
 }
