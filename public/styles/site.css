@@ -62,6 +62,38 @@ nav.main-nav {
   background: url(/images/logo-simple.svg);
   background-size: 100%; }
 
+.nav-song-links-arrows {
+  justify-content: space-between;
+  height: 60px;
+  margin-bottom: 20px; }
+
+.nav-arrow-left, .nav-arrow-right {
+  background: url(/images/arrow-back.svg) no-repeat;
+  background-size: contain;
+  width: 30px;
+  cursor: pointer; }
+
+.nav-arrow-right {
+  background-image: url(/images/arrow.svg); }
+
+.nav-arrow-left:hover {
+  background-image: url(/images/arrow-back-star.svg); }
+
+.nav-arrow-right:hover {
+  background-image: url(/images/arrow-star.svg); }
+
+.nav-arrow-number {
+  margin-top: -7px;
+  font-family: "Teko", sans-serif;
+  font-size: 60px;
+  color: #EF4123; }
+
+.nav-arrow-blank {
+  width: 30px; }
+
+.nav-song-links {
+  display: none; }
+
 .nav-dot {
   margin: 0 10px; }
 
