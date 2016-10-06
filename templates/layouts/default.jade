@@ -64,29 +64,34 @@ html(prefix='og: http://ogp.me/ns#')
           block content
 
         block nav
-          nav.main-nav
-            a(href='/')
-              img.nav-logo-img(src='/images/logo-simple.svg')
+          .nav-fixed-space
+            .nav-fixed
+              nav.main-nav
+                a.nav-logo-link(href='/')
+                  img.nav-logo-img(src='/images/logo-simple.svg')
 
-            .nav-links.box
-              span.nav-song-links
-                if song
-                  if song.number > 1
-                    a(href=`/${song.number - 1}`) Previous
-                  if song.number < songs.length && song.number > 1
-                    span.nav-dot •
-                  if song.number < songs.length
-                    a(href=`/${song.number + 1}`) Next
-                else
-                  a(href='/') Latest Song
+                .nav-links.box
+                  span.nav-song-links
+                    if song
+                      if song.number > 1
+                        a(href=`/${song.number - 1}`) Previous
+                      if song.number < songs.length && song.number > 1
+                        span.nav-dot •
+                      if song.number < songs.length
+                        a(href=`/${song.number + 1}`) Next
+                    else
+                      a(href='/') Latest Song
 
-              .nav-stars
-                - for (var i = 0; i < 6; i++)
-                  .nav-star.star-red
-                  .nav-star.star-blue
+                  .nav-stars
+                    - for (var i = 0; i < 4; i++)
+                      .nav-star.star-red
+                      .nav-star.star-blue
+                    - for (var i = 0; i < 4; i++)
+                      .nav-star.star-red.mobile
+                      .nav-star.star-blue.mobile
 
-              each navLink in navLinks
-                div.nav-link: a(href=navLink.url)= navLink.name
+                  each navLink in navLinks
+                    div.nav-link: a(href=navLink.url)= navLink.name
 
 
     //- JAVASCRIPT
@@ -109,3 +114,4 @@ html(prefix='og: http://ogp.me/ns#')
 
     //- Include template-specific javascript files by extending the js block
     block js
+
