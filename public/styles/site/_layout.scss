@@ -56,6 +56,12 @@ nav.main-nav {
 //  width: 200px;
 //  margin: 20px 20px;
   width: 100%;
+  height: 100%;
+}
+
+.nav-top {
+  height: 200px;
+  margin-bottom: 10px;
 }
 
 .nav-song-links-arrows {
@@ -102,6 +108,7 @@ nav.main-nav {
 }
 
 .nav-links {
+  flex: 1 0 0;
   flex-flow: column;
   padding: 16px 20px;
   background-color: $color-yellow;
@@ -147,6 +154,8 @@ nav.main-nav {
 
 
 .footer {
+  position: relative;
+  z-index: 1;
   display: inherit;
   height: 40px;
   padding: 20px 0;

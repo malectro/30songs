@@ -43,7 +43,12 @@ a {
 nav.main-nav {
   display: flex;
   flex-flow: column;
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
+
+.nav-top {
+  height: 200px;
+  margin-bottom: 10px; }
 
 .nav-song-links-arrows {
   justify-content: space-between;
@@ -83,6 +88,7 @@ nav.main-nav {
   margin: 0 10px; }
 
 .nav-links {
+  flex: 1 0 0;
   flex-flow: column;
   padding: 16px 20px;
   background-color: #FFC20E;
@@ -124,6 +130,8 @@ nav.main-nav {
   display: none; }
 
 .footer {
+  position: relative;
+  z-index: 1;
   display: inherit;
   height: 40px;
   padding: 20px 0;
