@@ -21,9 +21,10 @@ a {
   display: inherit; }
 
 .main-wrapper {
+  flex: 1 0 auto;
+  justify-content: space-between;
   max-width: 1000px;
-  min-width: 0;
-  justify-content: space-between; }
+  min-width: 0; }
 
 .main-content {
   flex: 1 0 0;
@@ -51,6 +52,7 @@ nav.main-nav {
   height: 100%; }
 
 .nav-top {
+  background: #FFC20E;
   height: 120px;
   margin-bottom: 10px; }
 
@@ -343,7 +345,7 @@ nav.main-nav {
 .main .song-quote {
   display: block;
   position: relative;
-  margin: 10px 0 20px;
+  margin: 10px 0 0;
   padding: 0 0 0 50px;
   font-size: 22px;
   font-style: italic; }

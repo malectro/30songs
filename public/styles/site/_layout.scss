@@ -22,9 +22,10 @@ a {
 }
 
 .main-wrapper {
+  flex: 1 0 auto;
+  justify-content: space-between;
   max-width: 1000px;
   min-width: 0;
-  justify-content: space-between;
 }
 
 .main-content {
@@ -64,6 +65,7 @@ nav.main-nav {
 }
 
 .nav-top {
+  background: $color-yellow;
   height: 120px;
   margin-bottom: 10px;
 }
