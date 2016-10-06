@@ -157,14 +157,20 @@ nav.main-nav {
     height: auto;
     flex: 1 0 0; }
   nav.main-nav {
-    flex: 0 0 auto;
-    max-width: none; }
+    flex: 1 0 0;
+    max-width: none;
+    width: auto;
+    padding: 0 20px; }
+  .main .nav-top {
+    display: none; }
   .nav-logo-link {
     text-align: center; }
   .nav-logo-img {
     max-width: 200px; }
   .nav-star.mobile {
-    display: inherit; } }
+    display: inherit; }
+  .nav-links {
+    flex: 0 0 auto; } }
 
 .splash-wrapper {
   flex: 1 0 0;

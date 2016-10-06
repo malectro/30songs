@@ -187,8 +187,13 @@ nav.main-nav {
     flex: 1 0 0;
   }
   nav.main-nav {
-    flex: 0 0 auto;
+    flex: 1 0 0;
     max-width: none;
+    width: auto;
+    padding: 0 20px;
+  }
+  .main .nav-top {
+    display: none;
   }
   .nav-logo-link {
     text-align: center;
@@ -198,6 +203,9 @@ nav.main-nav {
   }
   .nav-star.mobile {
     display: inherit;
+  }
+  .nav-links {
+    flex: 0 0 auto;
   }
 }
 
