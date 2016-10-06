@@ -32,7 +32,7 @@ a {
 .nav-fixed-space {
   position: relative;
   width: 200px;
-  margin: 20px 20px; }
+  margin: 0 20px; }
 
 .nav-fixed {
   position: fixed;
@@ -142,7 +142,8 @@ nav.main-nav {
     flex: 0 0 auto; }
   .nav-fixed-space {
     flex: 0 0 auto;
-    width: auto; }
+    width: auto;
+    margin: 20px 0; }
   .nav-fixed {
     position: static;
     height: auto;
