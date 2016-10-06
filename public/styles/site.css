@@ -45,27 +45,10 @@ nav.main-nav {
   flex-flow: column;
   width: 100%; }
 
-.nav-logo-img {
-  margin-bottom: 20px; }
-
-.nav-logo {
-  height: 466px;
-  width: 340px;
-  margin-bottom: 20px;
-  background: url(/images/logo.svg);
-  background-size: 100%; }
-
-.nav-logo-simple {
-  height: 242px;
-  width: 340px;
-  margin-bottom: 20px;
-  background: url(/images/logo-simple.svg);
-  background-size: 100%; }
-
 .nav-song-links-arrows {
   justify-content: space-between;
   height: 60px;
-  margin-bottom: 20px; }
+  margin: 10px 0; }
 
 .nav-arrow-left, .nav-arrow-right {
   background: no-repeat;
