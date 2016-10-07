@@ -196,7 +196,7 @@ nav.main-nav {
   flex: 1 0 0;
   max-width: 860px;
   justify-content: space-between;
-  padding: 20px;
+  padding: 20px 20px 0;
   color: #00344D;
   font-family: "Teko", sans-serif;
   font-weight: bold;
