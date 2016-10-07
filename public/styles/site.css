@@ -194,7 +194,7 @@ nav.main-nav {
 
 .splash-links {
   position: relative;
-  top: 80px;
+  top: 70px;
   flex: 1 0 0;
   flex-flow: row wrap;
   max-width: 860px;
@@ -210,9 +210,21 @@ nav.main-nav {
 .splash-links a:hover {
   color: #EF4123; }
 
+.splash-link-about {
+  position: relative;
+  left: 19px; }
+
+.splash-link-register {
+  position: relative;
+  left: 19px; }
+
+.splash-link-masthead {
+  position: relative;
+  right: 74px; }
+
 .splash-logo {
   flex: 0 0 auto;
-  margin: -20px 20px 20px; }
+  margin: -30px 20px 20px; }
 
 .splash-social {
   margin: 20px 0 40px;
@@ -309,6 +321,8 @@ nav.main-nav {
 
 @media (max-width: 900px) {
   .splash-links {
+    position: static; }
+  .splash-links a {
     position: static; }
   .splash-logo {
     margin-top: 20px; }
