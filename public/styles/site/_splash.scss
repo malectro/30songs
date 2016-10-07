@@ -16,6 +16,8 @@
 }
 
 .splash-links {
+  position: relative;
+  top: 80px;
   flex: 1 0 0;
   flex-flow: row wrap;
   max-width: 860px;
@@ -35,11 +37,11 @@
 
 .splash-logo {
   flex: 0 0 auto;
-  margin: 20px;
+  margin: -20px 20px 20px;
 }
 
 .splash-social {
-  margin-bottom: 20px;
+  margin: 20px 0 40px;
   padding: 0 20px;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -145,6 +147,15 @@
 }
 
 @media(max-width: 900px) {
+  .splash-links {
+    position: static;
+  }
+  .splash-logo {
+    margin-top: 20px;
+  }
+  .splash-social {
+    margin: 0 0 20px;
+  }
   .splash-social-link {
     background: none !important;
     padding: 0;
