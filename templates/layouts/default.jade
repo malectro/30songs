@@ -75,8 +75,8 @@ html(prefix='og: http://ogp.me/ns#')
                 a.nav-logo-link(href='/')
                   img.nav-logo-img(src='/images/logo-simple.svg')
 
-                .nav-song-links-arrows
-                  if song
+                if song
+                  .nav-song-links-arrows
                     if song.number > 1
                       a.nav-arrow-left(href=`/${song.number - 1}` title='Previous Song')
                     else
@@ -86,6 +86,8 @@ html(prefix='og: http://ogp.me/ns#')
                       a.nav-arrow-right(href=`/${song.number + 1}` title='Next Song')
                     else
                       .nav-arrow-blank
+                else
+                  .nav-song-links-buffer
 
                 .nav-links.box
                   each navLink in navLinks
