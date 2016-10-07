@@ -212,7 +212,6 @@ nav.main-nav {
   margin: 20px; }
 
 .splash-social {
-  height: 30px;
   margin-bottom: 20px;
   padding: 0 20px;
   flex-flow: row wrap;
@@ -220,9 +219,10 @@ nav.main-nav {
 
 .splash-social-link {
   display: flex;
+  height: 30px;
   align-items: center;
   padding: 0 10px;
-  background: #FFC20E;
+  background: #efefef;
   cursor: pointer;
   font-weight: bold;
   color: #00344D;
@@ -305,6 +305,13 @@ nav.main-nav {
   background-image: url(/images/arrow-back-star.svg); }
 
 @media (max-width: 900px) {
+  .splash-social-link {
+    background: none !important;
+    padding: 0; }
+  .splash-social-link svg {
+    margin: 0; }
+  .splash-social-link span {
+    display: none; }
   .splash-songs {
     flex-flow: column;
     align-items: stretch;
