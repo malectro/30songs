@@ -1,6 +1,4 @@
 
-
-
 const interval = 2.1;
 const variance = 0.6;
 
@@ -8,6 +6,11 @@ const twiceVariance = variance * 2;
 const unitDiagonal = 0.7071067811865476;
 const devicePixelRatio = window.devicePixelRatio || 1;
 
+
+
+function forEach(collection, callback) {
+  return Array.prototype.forEach.call(collection, callback);
+}
 
 function vary(origin) {
   return Math.random() * twiceVariance - variance + origin;
@@ -89,7 +92,7 @@ function createBrushStroke(color, width, height) {
 }
 
 setTimeout(() => {
-  Array.prototype.forEach.call(document.querySelectorAll('.box'), el => {
+  forEach(document.querySelectorAll('.box'), el => {
     const color = el.getAttribute('paint-color') || 'rgb(255, 194, 14)';
     createBrushStroke(color, el.offsetWidth, el.offsetHeight).then(blob => {
       const imgSrc = URL.createObjectURL(blob);
@@ -100,6 +103,12 @@ setTimeout(() => {
   });
 }, 1000);
 
+forEach(document.querySelectorAll('.popup'), el => {
+  el.addEventListener('click', event => {
+    event.preventDefault();
+    window.open(el.href, 'popup', 'width=600, height=400, scrollbars=no');
+  });
+});
 
 const footerEl = document.querySelector('footer');
 const footerRect = footerEl.getBoundingClientRect();

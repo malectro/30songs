@@ -13,15 +13,15 @@ block content
       img.splash-logo(src='/images/long-logo.svg')
 
       .splash-social
-        a.splash-social-link.box(paint-color='#efefef')
+        a.splash-social-link.box(href='https://play.spotify.com/user/30days30songs/playlist/0GDtTmyBfSvYxMgFCS6yee' paint-color='#efefef')
           svg.social-icon
             use.social-use-icon(xlink:href='/images/twitter-icon.svg#spotify-icon')
           span Listen to the playlist
-        a.splash-social-link.box(paint-color='#efefef')
+        a.splash-social-link.box.popup(href='https://twitter.com/intent/tweet?text='+'http://www.30days30songs.com' about='_blank' paint-color='#efefef')
           svg.social-icon
             use.social-use-icon(xlink:href='/images/twitter-icon.svg#twitter-icon')
           span Share on Twitter
-        a.splash-social-link.box(paint-color='#efefef')
+        a.splash-social-link.box.popup(href='https://www.facebook.com/sharer/sharer.php?u=http://www.30days30songs.com' paint-color='#efefef')
           svg.social-icon.facebook
             use.social-use-icon(xlink:href='/images/twitter-icon.svg#facebook-icon')
           span Share on Facebook
