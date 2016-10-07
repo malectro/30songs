@@ -194,6 +194,7 @@ nav.main-nav {
 
 .splash-links {
   flex: 1 0 0;
+  flex-flow: row wrap;
   max-width: 860px;
   justify-content: space-between;
   padding: 20px 20px 0;
@@ -326,6 +327,11 @@ nav.main-nav {
     padding: 0 20px; }
   .splash-song {
     width: initial; } }
+
+@media (max-width: 360px) {
+  .splash-links {
+    flex-flow: column;
+    line-height: 1.2; } }
 
 .song {
   flex-flow: column;
