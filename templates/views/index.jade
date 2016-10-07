@@ -1,7 +1,7 @@
 extends ../layouts/default
 
 block header
-  header.splash-header.box(paint-color='#efefef')
+  header.splash-header
     .splash-links
       a(href='/about') About
       a(href='https://www.headcount.org/') Register to Vote
@@ -11,6 +11,20 @@ block content
   .splash-wrapper
     .splash
       img.splash-logo(src='/images/long-logo.svg')
+
+      .splash-social
+        a.splash-social-link.box(paint-color='#efefef')
+          svg.social-icon
+            use.social-use-icon(xlink:href='/images/twitter-icon.svg#spotify-icon')
+          span Listen to the playlist
+        a.splash-social-link.box(paint-color='#efefef')
+          svg.social-icon
+            use.social-use-icon(xlink:href='/images/twitter-icon.svg#twitter-icon')
+          span Share on Twitter
+        a.splash-social-link.box(paint-color='#efefef')
+          svg.social-icon.facebook
+            use.social-use-icon(xlink:href='/images/twitter-icon.svg#facebook-icon')
+          span Share on Facebook
 
       if user
         ol.splash-songs

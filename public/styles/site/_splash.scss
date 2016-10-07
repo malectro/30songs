@@ -21,18 +21,58 @@
   justify-content: space-between;
   padding: 20px;
   color: $color-blue;
+  font-family: $font-title;
   font-weight: bold;
+  font-size: 20px;
+  line-height: 16px;
   letter-spacing: 3px;
 }
 
 .splash-links a:hover {
-  color: white;
-  background: $color-blue;
+  color: $color-red;
 }
 
 .splash-logo {
   flex: 0 0 auto;
   margin: 20px;
+}
+
+.splash-social {
+  height: 30px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.splash-social-link {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  background: $color-yellow;
+  cursor: pointer;
+  font-weight: bold;
+  color: $color-blue;
+  letter-spacing: 3px;
+}
+.splash-social-link:hover {
+  color: $color-red;
+}
+.splash-social-link:hover .social-use-icon {
+  fill: $color-red;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.6em;
+}
+.social-icon.facebook {
+  height: 18px;
+}
+
+.social-use-icon {
+  fill: $color-blue;
 }
 
 .splash-songs {
