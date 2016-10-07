@@ -1,9 +1,16 @@
 extends ../layouts/default
 
+block header
+  header.splash-header.box(paint-color='#efefef')
+    .splash-links
+      a(href='/about') About
+      a(href='https://www.headcount.org/') Register to Vote
+      a(href='/credits') Masthead
+
 block content
   .splash-wrapper
     .splash
-      .splash-logo
+      img.splash-logo(src='/images/long-logo.svg')
 
       if user
         ol.splash-songs

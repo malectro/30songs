@@ -1,20 +1,38 @@
 .splash-wrapper {
   flex: 1 0 0;
-  justify-content: center;
+  flex-flow: column;
 }
 
 .splash {
-  flex: 1 0 0;
+  flex: 1 0 auto;
   flex-flow: column;
   max-width: 900px;
 }
 
+.splash-header {
+  display: inherit;
+  align-self: stretch;
+  justify-content: center;
+}
+
+.splash-links {
+  flex: 1 0 0;
+  max-width: 860px;
+  justify-content: space-between;
+  padding: 20px;
+  color: $color-blue;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.splash-links a:hover {
+  color: white;
+  background: $color-blue;
+}
+
 .splash-logo {
   flex: 0 0 auto;
-  height: 70vh;
   margin: 20px;
-  background: url(/images/logo.svg) center no-repeat;
-  background-size: contain;
 }
 
 .splash-songs {

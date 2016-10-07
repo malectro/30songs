@@ -93,8 +93,8 @@ setTimeout(() => {
     const color = el.getAttribute('paint-color') || 'rgb(255, 194, 14)';
     createBrushStroke(color, el.offsetWidth, el.offsetHeight).then(blob => {
       const imgSrc = URL.createObjectURL(blob);
-      el.style.backgroundColor = 'transparent';
       el.style.backgroundImage = `url('${imgSrc}')`;
+      el.style.backgroundColor = 'transparent';
       el.style.backgroundSize = '100%';
     });
   });
