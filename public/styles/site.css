@@ -466,3 +466,12 @@ nav.main-nav {
   font-size: 92px;
   margin: 0;
   color: #00344D; }
+
+.main .page strong a {
+  color: #EF4123; }
+
+.main .page strong a:hover {
+  color: #00344D; }
+
+.main .page a:hover {
+  color: #EF4123; }
