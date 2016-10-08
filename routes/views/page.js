@@ -1,22 +1,22 @@
 var cache = require('memory-cache');
 var keystone = require('keystone');
 
+const NOT_FOUND = Symbol('page not found');
+
 
 function getPage(slug) {
   return new Promise((resolve, reject) => {
     const page = cache.get(slug);
 
-    if (page) {
+    if (page !== null) {
       return resolve(page);
     }
 
     keystone.list('Page').model.findOne({
       slug,
     }).exec().then(page => {
-      if (!page) {
-        reject();
-      }
-      cache.put(slug, page, 1000);
+      page = page || NOT_FOUND;
+      cache.put(slug, page, 10000);
       resolve(page);
     }, error => reject);
   });
@@ -27,8 +27,12 @@ exports = module.exports = function (req, res, next) {
 	var view = new keystone.View(req, res);
 
   getPage(req.params.slug).then(page => {
-    locals.page = page;
-    view.render('page');
+    if (page !== NOT_FOUND) {
+      locals.page = page;
+      view.render('page');
+    } else {
+      res.notFound();
+    }
   }).catch(next);
 };
 

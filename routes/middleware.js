@@ -29,7 +29,7 @@ function getAllData() {
         slug: 'about',
       }).exec(),
     ]).then(data => {
-      cache.put('all-data', data, 1000);
+      cache.put('all-data', data, 10000);
       resolve(data);
     }).catch(reject);
   });
@@ -107,4 +107,13 @@ exports.userOr404 = function (req, res, next) {
 exports.notFound = function (req, res) {
   res.status(404).render('404');
 }
+
+
+exports.cacheResponse = function (req, res, next) {
+  const previousResponse = cache.get(req.url);
+
+  if (previousResponse) {
+    res.send(previousResponse);
+  }
+};
 
