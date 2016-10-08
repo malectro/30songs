@@ -392,6 +392,7 @@ nav.main-nav {
 .song-title {
   margin: 0;
   font-style: italic;
+  line-height: 0.8;
   color: #00344D; }
 
 .song-title::before {
