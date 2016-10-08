@@ -63,35 +63,36 @@ html(prefix='og: http://ogp.me/ns#')
         .empty
 
       .main-wrapper
-        .main-content
-          block content
+        .main-center
+          .main-content
+            block content
 
-        block nav
-          .nav-fixed-space
-            .nav-fixed
-              nav.main-nav
-                .nav-top.box
+          block nav
+            .nav-fixed-space
+              .nav-fixed
+                nav.main-nav
+                  .nav-top.box
 
-                a.nav-logo-link(href='/')
-                  img.nav-logo-img(src='/images/logo-simple.svg')
+                  a.nav-logo-link(href='/')
+                    img.nav-logo-img(src='/images/logo-simple.svg')
 
-                if song
-                  .nav-song-links-arrows
-                    if song.number > 1
-                      a.nav-arrow-left(href=`/${song.number - 1}` title='Previous Song')
-                    else
-                      .nav-arrow-blank
-                    .nav-arrow-number= song.number
-                    if song.number < songs.length
-                      a.nav-arrow-right(href=`/${song.number + 1}` title='Next Song')
-                    else
-                      .nav-arrow-blank
-                else
-                  .nav-song-links-buffer
+                  if song
+                    .nav-song-links-arrows
+                      if song.number > 1
+                        a.nav-arrow-left(href=`/${song.number - 1}` title='Previous Song')
+                      else
+                        .nav-arrow-blank
+                      .nav-arrow-number= song.number
+                      if song.number < songs.length
+                        a.nav-arrow-right(href=`/${song.number + 1}` title='Next Song')
+                      else
+                        .nav-arrow-blank
+                  else
+                    .nav-song-links-buffer
 
-                .nav-links.box
-                  each navLink in navLinks
-                    div.nav-link: a(href=navLink.url)= navLink.name
+                  .nav-links.box
+                    each navLink in navLinks
+                      div.nav-link: a(href=navLink.url)= navLink.name
 
       footer.footer.box(paint-color='#efefef')
         .footer-eagle
