@@ -186,6 +186,11 @@ nav.main-nav {
   .nav-links {
     flex: 0 0 auto; } }
 
+@media (max-height: 500px) {
+  .nav-fixed, .nav-fixed.unpin {
+    position: static !important;
+    height: auto; } }
+
 .splash-wrapper {
   flex: 1 0 0;
   flex-flow: column;

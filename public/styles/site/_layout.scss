@@ -224,3 +224,10 @@ nav.main-nav {
   }
 }
 
+@media(max-height: 700px) {
+  .nav-fixed, .nav-fixed.unpin {
+    position: static !important;
+    height: auto;
+  }
+}
+
