@@ -24,6 +24,6 @@
   "scripts": {
     "lint": "eslint .",
     "start": "NODE_ENV=production node keystone.js",
-    "start:dev": "nodemon keystone.js"
+    "start:dev": "nodemon --ignore public/ keystone.js"
   }
 }
