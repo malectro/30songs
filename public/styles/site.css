@@ -430,6 +430,9 @@ nav.main-nav {
   background: #FFC20E;
   padding: 20px; }
 
+.song-bio > * {
+  margin: 0; }
+
 .song-info-col2 {
   flex: 1 0 0;
   flex-flow: column;
@@ -440,8 +443,7 @@ nav.main-nav {
   position: relative;
   margin: 10px 0 0;
   padding: 0 0 0 50px;
-  font-size: 22px;
-  font-style: italic; }
+  font-size: 22px; }
 
 .song-quote::before {
   content: '“';

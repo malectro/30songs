@@ -20,7 +20,7 @@ block content
     .song-info
       .song-info-col1
         div.song-image(style='background-image: url('+song.image.url+');')
-        p.song-bio.box= song.bio
+        .song-bio.box!= song.bio.html
 
       .song-info-col2
         .song-quote!= song.quote.html

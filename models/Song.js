@@ -23,7 +23,7 @@ Song.add({
     allowedTypes: ['image/png', 'image/jpeg', 'image/gif'],
     showAsImage: true,
   },
-  bio: {type: Types.Textarea},
+  bio: {type: Types.Markdown, toolbarOptions: {hiddenButtons: 'H1,H2,H3,H4,Code,Image,Quote,List'}},
   quote: {type: Types.Markdown, toolbarOptions: {hiddenButtons: 'H1,H2,H3,H4,Code,Image,Quote,List'}},
   lyrics: {type: Types.Textarea},
   state: {type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true},
