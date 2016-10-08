@@ -158,7 +158,7 @@ nav.main-nav {
   background-size: contain; }
 
 @media (max-width: 664px) {
-  .main-wrapper {
+  .main-center {
     flex-flow: column; }
   .main-content {
     flex: 0 0 auto; }
