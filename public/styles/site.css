@@ -104,6 +104,7 @@ nav.main-nav {
 .nav-links {
   flex: 1 0 auto;
   flex-flow: column;
+  justify-content: space-between;
   padding: 16px 20px;
   background-color: #FFC20E;
   color: #00344D;
@@ -114,6 +115,9 @@ nav.main-nav {
 .nav-links a:hover {
   background: #00344D;
   color: white; }
+
+.nav-links-main {
+  flex-flow: column; }
 
 .nav-link {
   padding: 4px 0; }

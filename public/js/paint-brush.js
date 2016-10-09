@@ -135,7 +135,8 @@ const footerPivot = window.scrollY + footerRect.top - window.innerHeight;
 const navEl = document.querySelector('.nav-fixed');
 
 let pinned = false;
-window.addEventListener('scroll', () => {
+
+function handleScroll() {
   const y = window.scrollY;
   if (pinned) {
     if (y < footerPivot) {
@@ -148,5 +149,7 @@ window.addEventListener('scroll', () => {
       navEl.classList.add('unpin');
     }
   }
-});
+}
+window.addEventListener('scroll', handleScroll);
+handleScroll();
 
