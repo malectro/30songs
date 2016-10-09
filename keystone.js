@@ -14,6 +14,7 @@ keystone.init({
 	'brand': '30songs',
 
 	'sass': 'public',
+  'compress': true,
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',

@@ -35,6 +35,12 @@ function getAllData() {
   });
 }
 
+
+exports.initCache = function (req, res, next) {
+  res.set('Cache-Control', 'public, max-age=60');
+  next();
+};
+
 /**
 	Initialises the standard view locals
 
