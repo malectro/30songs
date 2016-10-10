@@ -2,46 +2,44 @@ extends ../layouts/default
 
 block header
   header.splash-header
-    if user
-      .splash-links
-        a.splash-link-about(href='/about') About
-        a.splash-link-register(href='https://www.headcount.org/') Register to Vote
-        a.splash-link-masthead(href='/masthead') Masthead
+    .splash-links
+      a.splash-link-about(href='/about') About
+      a.splash-link-register(href='https://www.headcount.org/') Register to Vote
+      a.splash-link-masthead(href='/masthead') Masthead
 
 block content
   .splash-wrapper
     .splash
       img.splash-logo(src='/images/long-logo.svg')
 
-      if user
-        .splash-social
-          a.splash-social-link.box(href='https://play.spotify.com/user/30days30songs/playlist/0GDtTmyBfSvYxMgFCS6yee' paint-color='#efefef')
-            svg.social-icon
-              use.social-use-icon(xlink:href='/images/twitter-icon.svg#spotify-icon')
-            span Listen to the playlist
-          a.splash-social-link.box.popup(href='https://twitter.com/intent/tweet?text='+'http://www.30days30songs.com' about='_blank' paint-color='#efefef')
-            svg.social-icon
-              use.social-use-icon(xlink:href='/images/twitter-icon.svg#twitter-icon')
-            span Share on Twitter
-          a.splash-social-link.box.popup(href='https://www.facebook.com/sharer/sharer.php?u=http://www.30days30songs.com' paint-color='#efefef')
-            svg.social-icon.facebook
-              use.social-use-icon(xlink:href='/images/twitter-icon.svg#facebook-icon')
-            span Share on Facebook
+      .splash-social
+        a.splash-social-link.box(href='https://play.spotify.com/user/30days30songs/playlist/0GDtTmyBfSvYxMgFCS6yee' paint-color='#efefef')
+          svg.social-icon
+            use.social-use-icon(xlink:href='/images/twitter-icon.svg#spotify-icon')
+          span Listen to the playlist
+        a.splash-social-link.box.popup(href='https://twitter.com/intent/tweet?text='+'http://www.30days30songs.com' about='_blank' paint-color='#efefef')
+          svg.social-icon
+            use.social-use-icon(xlink:href='/images/twitter-icon.svg#twitter-icon')
+          span Share on Twitter
+        a.splash-social-link.box.popup(href='https://www.facebook.com/sharer/sharer.php?u=http://www.30days30songs.com' paint-color='#efefef')
+          svg.social-icon.facebook
+            use.social-use-icon(xlink:href='/images/twitter-icon.svg#facebook-icon')
+          span Share on Facebook
 
-        ol.splash-songs
-          - for (let i = 0; i < 30; i++)
-            - song = songs[i]
-            if song
-              a.splash-song(href=`/${song.number}`)
-                li.splash-song-item
-                  span.splash-song-number= song.number
-                  .splash-song-info
-                    span.splash-song-artist= song.artist
-                    span.splash-song-title= song.title
-                  .splash-song-arrow
-            else
-              li.splash-song
-                span.splash-song-number= i + 1
+      ol.splash-songs
+        - for (let i = 0; i < 30; i++)
+          - song = songs[i]
+          if song
+            a.splash-song(href=`/${song.number}`)
+              li.splash-song-item
+                span.splash-song-number= song.number
+                .splash-song-info
+                  span.splash-song-artist= song.artist
+                  span.splash-song-title= song.title
+                .splash-song-arrow
+          else
+            li.splash-song
+              span.splash-song-number= i + 1
 
 
 block nav
