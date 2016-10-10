@@ -93,11 +93,8 @@ html(prefix='og: http://ogp.me/ns#')
                     .nav-song-links-buffer
 
                   .nav-links.box
-                    .nav-links-main
-                      each navLink in navLinks
-                        div.nav-link: a(href=navLink.url)= navLink.name
-
-                    .nav-link: a(href='/masthead') Masthead
+                    each navLink in navLinks
+                      div.nav-link: a(href=navLink.url)= navLink.name
 
       footer.footer.box(paint-color='#efefef')
         .footer-eagle

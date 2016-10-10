@@ -104,7 +104,6 @@ nav.main-nav {
 .nav-links {
   flex: 1 0 auto;
   flex-flow: column;
-  justify-content: space-between;
   padding: 16px 20px;
   background-color: #FFC20E;
   color: #00344D;
@@ -115,9 +114,6 @@ nav.main-nav {
 .nav-links a:hover {
   background: #00344D;
   color: white; }
-
-.nav-links-main {
-  flex-flow: column; }
 
 .nav-link {
   padding: 4px 0; }
@@ -495,8 +491,9 @@ nav.main-nav {
 .main .page h1 {
   text-transform: uppercase;
   font-family: 'Teko', sans-serif;
-  font-size: 92px;
-  margin: 0;
+  font-size: 64px;
+  line-height: 0.8;
+  margin: 20px 0 0;
   color: #00344D; }
 
 .main .page strong a {
