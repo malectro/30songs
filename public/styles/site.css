@@ -71,20 +71,20 @@ nav.main-nav {
 
 .nav-arrow-left, .nav-arrow-right {
   background: no-repeat;
-  background-image: url(/images/arrow-back.svg), url(/images/arrow-back-star.svg);
+  background-image: url(../images/arrow-back.svg), url(../images/arrow-back-star.svg);
   background-position: center, -100px;
   background-size: contain;
   width: 30px;
   cursor: pointer; }
 
 .nav-arrow-right {
-  background-image: url(/images/arrow.svg), url(/images/arrow-star.svg); }
+  background-image: url(../images/arrow.svg), url(../images/arrow-star.svg); }
 
 .nav-arrow-left:hover {
-  background-image: url(/images/arrow-back-star.svg); }
+  background-image: url(../images/arrow-back-star.svg); }
 
 .nav-arrow-right:hover {
-  background-image: url(/images/arrow-star.svg); }
+  background-image: url(../images/arrow-star.svg); }
 
 .nav-arrow-number {
   margin-top: -7px;
@@ -135,10 +135,10 @@ nav.main-nav {
   margin-right: 0; }
 
 .nav-star.star-blue {
-  background-image: url(/images/star-blue.svg); }
+  background-image: url(../images/star-blue.svg); }
 
 .nav-star.star-red {
-  background-image: url(/images/star-red.svg); }
+  background-image: url(../images/star-red.svg); }
 
 .nav-star.mobile {
   display: none; }
@@ -154,7 +154,7 @@ nav.main-nav {
 
 .footer-eagle {
   width: 40px;
-  background: url(/images/eagle.svg) center no-repeat;
+  background: url(../images/eagle.svg) center no-repeat;
   background-size: contain; }
 
 @media (max-width: 664px) {
@@ -326,12 +326,12 @@ nav.main-nav {
   width: 28px;
   height: 68px;
   background: no-repeat;
-  background-image: url(/images/arrow-back.svg), url(/images/arrow-back-star.svg);
+  background-image: url(../images/arrow-back.svg), url(../images/arrow-back-star.svg);
   background-position: center, -1000px;
   background-size: contain; }
 
 .splash-song:hover .splash-song-arrow {
-  background-image: url(/images/arrow-back-star.svg); }
+  background-image: url(../images/arrow-back-star.svg); }
 
 @media (max-width: 900px) {
   .splash-links {

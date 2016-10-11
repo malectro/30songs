@@ -2,6 +2,8 @@
 // customising the .env file in your project's root folder.
 require('dotenv').config();
 
+const staticRoot = process.env.STATIC_URL || '';
+
 // Require keystone
 var keystone = require('keystone');
 
@@ -19,6 +21,7 @@ keystone.init({
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'jade',
+  'static root': staticRoot,
 
 	'auto update': true,
   'mongo': process.env.MONGODB_URI || 'mongodb://localhost/30songs',
@@ -39,6 +42,7 @@ keystone.set('locals', {
 	env: keystone.get('env'),
 	utils: keystone.utils,
 	editable: keystone.content.editable,
+  asset: path => staticRoot + path,
 });
 
 // Load your project's Routes

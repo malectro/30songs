@@ -152,12 +152,12 @@
   width: 28px;
   height: 68px;
   background: no-repeat;
-  background-image: url(/images/arrow-back.svg), url(/images/arrow-back-star.svg);
+  background-image: url(../images/arrow-back.svg), url(../images/arrow-back-star.svg);
   background-position: center, -1000px;
   background-size: contain;
 }
 .splash-song:hover .splash-song-arrow {
-  background-image: url(/images/arrow-back-star.svg);
+  background-image: url(../images/arrow-back-star.svg);
 }
 
 @media(max-width: 900px) {
