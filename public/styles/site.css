@@ -490,6 +490,9 @@ nav.main-nav {
   .song-artist, .song-title {
     font-size: 64px; } }
 
+.game {
+  flex-flow: column; }
+
 .main .page {
   display: block;
   flex: 1 0 0;

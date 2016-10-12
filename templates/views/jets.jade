@@ -1,0 +1,20 @@
+extends ../layouts/default
+
+block title
+  title EL VY - 30 Days, 30 Songs
+  meta(name='description' content='Are These My Jets?')
+
+block openGraph
+  meta(property='og:title' content='Are These My Jets?')
+  meta(property='og:type' content='website')
+  meta(property='og:url' content='http://www.30days30songs.com/jets')
+  meta(property='og:image' content='http://www.30days30songs.com/images/start-game.png' || 'http://www.30days30songs.com/images/logo.png')
+  meta(property='og:description' content='EL VY')
+
+block nav
+  .empty
+
+block content
+  .game
+    iframe.song-game(src=asset('/el-vy/index.html') frameborder=0 width=960 height=700)
+
