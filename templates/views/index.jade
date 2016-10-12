@@ -7,6 +7,20 @@ block header
       a.splash-link-register(href='https://www.headcount.org/') Register to Vote
       a.splash-link-masthead(href='/masthead') Masthead
 
+    .splash-header-social
+      a.splash-header-social-link(href='https://twitter.com/30days30songs' title='Twitter')
+        svg.social-icon
+          use.social-use-icon(xlink:href='/images/social-icons.svg#twitter-icon')
+      a.splash-header-social-link(href='https://www.facebook.com/30songs30' title='Facebook')
+        svg.social-icon
+          use.social-use-icon(xlink:href='/images/social-icons.svg#facebook-icon')
+      a.splash-header-social-link(href='https://www.instagram.com/30days30songs/' title='Instagram')
+        svg.social-icon
+          use.social-use-icon(xlink:href='/images/social-icons.svg#instagram-icon')
+      a.splash-header-social-link(href='https://www.youtube.com/c/30days30songs' title='Youtube')
+        svg.social-icon
+          use.social-use-icon(xlink:href='/images/social-icons.svg#youtube-icon')
+
 block content
   .splash-wrapper
     .splash
@@ -15,15 +29,15 @@ block content
       .splash-social
         a.splash-social-link.box(href='https://open.spotify.com/user/30days30songs/playlist/0GDtTmyBfSvYxMgFCS6yee?utm_campaign=30days30songs&utm_medium=web' paint-color='#efefef')
           svg.social-icon
-            use.social-use-icon(xlink:href='/images/twitter-icon.svg#spotify-icon')
+            use.social-use-icon(xlink:href='/images/social-icons.svg#spotify-icon')
           span Listen to the playlist
         a.splash-social-link.box.popup(href='https://twitter.com/intent/tweet?text='+'http://www.30days30songs.com' about='_blank' paint-color='#efefef')
           svg.social-icon
-            use.social-use-icon(xlink:href='/images/twitter-icon.svg#twitter-icon')
+            use.social-use-icon(xlink:href='/images/social-icons.svg#twitter-icon')
           span Share on Twitter
         a.splash-social-link.box.popup(href='https://www.facebook.com/sharer/sharer.php?u=http://www.30days30songs.com' paint-color='#efefef')
           svg.social-icon.facebook
-            use.social-use-icon(xlink:href='/images/twitter-icon.svg#facebook-icon')
+            use.social-use-icon(xlink:href='/images/social-icons.svg#facebook-icon')
           span Share on Facebook
 
       ol.splash-songs

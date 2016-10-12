@@ -17,7 +17,7 @@ a {
   min-width: 0;
   font-family: 'Helvetica Neue', sans-serif; }
 
-.main div {
+div {
   display: inherit; }
 
 .main-wrapper {
@@ -236,6 +236,14 @@ nav.main-nav {
   position: relative;
   right: 74px; }
 
+.splash-header-social {
+  position: absolute;
+  top: 10px;
+  right: 0; }
+
+.splash-header-social-link:hover .social-use-icon {
+  fill: #EF4123; }
+
 .splash-logo {
   flex: 0 0 auto;
   margin: -30px 20px 20px; }
@@ -334,6 +342,8 @@ nav.main-nav {
   background-image: url(../images/arrow-back-star.svg); }
 
 @media (max-width: 900px) {
+  .splash-header-social {
+    display: none; }
   .splash-links {
     position: static; }
   .splash-links a {
