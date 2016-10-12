@@ -22,13 +22,15 @@ function getAllData() {
 
     Promise.all([
       keystone.list('NavLink').model.find().sort('order').exec(),
-      keystone.list('Song').model.find({
-        state: 'published',
-      }).sort('number').exec(),
+      keystone.list('Song').model.find().sort('number').exec(),
       keystone.list('Page').model.findOne({
         slug: 'about',
       }).exec(),
-    ]).then(data => {
+    ]).then(([links, songs, aboutPage]) => {
+      const data = {
+        links, songs, aboutPage,
+        publicSongs: songs.filter(song => song.state === 'published'),
+      };
       cache.put('all-data', data, 10000);
       resolve(data);
     }).catch(reject);
@@ -53,9 +55,9 @@ exports.initLocals = function (req, res, next) {
 
   locals.user = req.user;
 
-  getAllData().then(([links, songs, aboutPage]) => {
+  getAllData().then(({links, songs, publicSongs, aboutPage}) => {
     locals.navLinks = links;
-    locals.songs = songs;
+    locals.songs = req.user ? songs : publicSongs;
     locals.latestSong = _.last(songs);
     locals.aboutText = (aboutPage && aboutPage.description) || '30 days 30 songs is a playlist of songs written and recorded by musicians for a Trump-free America.';
     next();
