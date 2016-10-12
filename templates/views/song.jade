@@ -17,13 +17,20 @@ block content
     h2.song-artist= song.artist
     h1.song-title= song.title
 
+    if song.gamePath
+      a.start-game(href=asset('/el-vy/index.html'))
+        img(src=asset('/images/start-game.png'))
+    //iframe.song-game(src=asset('/el-vy/index.html') frameborder=0)
+
     if song.youtubeId
       iframe.song-video(src='https://www.youtube.com/embed/'+song.youtubeId height=340 frameborder=0)
-    iframe.song-widget(src='https://embed.spotify.com/?uri='+song.spotifyUrl height=80 frameborder=0 allowtransparency='true')
+    if song.spotifyUrl
+      iframe.song-widget(src='https://embed.spotify.com/?uri='+song.spotifyUrl height=80 frameborder=0 allowtransparency='true')
 
     .song-info
       .song-info-col1
-        div.song-image(style='background-image: url('+song.image.url+');')
+        if song.image.url
+          div.song-image(style='background-image: url('+song.image.url+');')
         .song-bio.box!= song.bio.html
 
       .song-info-col2

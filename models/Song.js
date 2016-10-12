@@ -18,6 +18,7 @@ Song.add({
     return youtubeUrl.query.v;
   }},
   spotifyUrl: {type: String},
+  gamePath: {type: String},
   image: {
     type: Types.S3File,
     allowedTypes: ['image/png', 'image/jpeg', 'image/gif'],

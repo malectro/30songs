@@ -130,14 +130,15 @@ forEach(document.querySelectorAll('.popup'), el => {
 });
 
 const footerEl = document.querySelector('footer');
-const footerRect = footerEl.getBoundingClientRect();
-const footerPivot = window.scrollY + footerRect.top - window.innerHeight;
 const navEl = document.querySelector('.nav-fixed');
 
 let pinned = false;
 
 function handleScroll() {
   const y = window.scrollY;
+  const footerRect = footerEl.getBoundingClientRect();
+  const footerPivot = window.scrollY + footerRect.top - window.innerHeight;
+
   if (pinned) {
     if (y < footerPivot) {
       pinned = false;

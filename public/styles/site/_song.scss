@@ -1,4 +1,5 @@
 .song {
+  flex: 1 0 0;
   flex-flow: column;
   padding: 40px 20px;
   min-width: 0;
@@ -40,7 +41,17 @@
   content: '”';
 }
 
-.song-video {
+.start-game {
+  position: relative;
+}
+.start-game img {
+  width: 100%;
+}
+.song-game {
+  min-height: 600px;
+}
+
+.song-video, .song-game, .start-game {
   margin: 20px 0 0;
 }
 
