@@ -39,7 +39,9 @@ function getAllData() {
 
 
 exports.initCache = function (req, res, next) {
-  res.set('Cache-Control', 'public, max-age=60');
+  if (!req.path.startsWith('/keystone')) {
+    res.set('Cache-Control', 'public, max-age=60');
+  }
   next();
 };
 
