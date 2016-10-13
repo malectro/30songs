@@ -23,6 +23,9 @@ Song.add({
     type: Types.S3File,
     allowedTypes: ['image/png', 'image/jpeg', 'image/gif'],
     showAsImage: true,
+    headers: {
+      'x-amz-meta-Cache-Control' : `max-age=${60 * 60 * 24}`,
+    },
   },
   cropImage: {type: Boolean, label: 'Crop image into a circle.', default: true},
   bio: {type: Types.Markdown, toolbarOptions: {hiddenButtons: 'H1,H2,H3,H4,Code,Image,Quote,List'}},
