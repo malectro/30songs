@@ -30,7 +30,10 @@ block content
     .song-info
       .song-info-col1
         if song.image.url
-          div.song-image(style='background-image: url('+song.image.url+');')
+          if song.cropImage
+            div.song-image(style='background-image: url('+song.image.url+');')
+          else
+            img.song-image(src=song.image.url)
         .song-bio.box!= song.bio.html
 
       .song-info-col2

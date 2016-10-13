@@ -447,6 +447,10 @@ nav.main-nav {
   margin-top: 10px;
   border-radius: 50%; }
 
+img.song-image {
+  height: auto;
+  border-radius: 0; }
+
 .song-bio {
   margin-top: 20px;
   line-height: 1.25;
