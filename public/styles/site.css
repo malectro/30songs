@@ -223,10 +223,10 @@ nav.main-nav {
   position: absolute;
   left: 50%;
   top: 35px;
-  margin-left: -43px;
+  margin-left: -38px;
   text-align: center;
   font-family: Futura, "Helvetica Neue", Arial, sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   color: #EF4123; }
 
 .splash-header-quote .quote {
@@ -236,11 +236,11 @@ nav.main-nav {
   position: relative;
   top: 70px;
   top: 110px;
-  left: 182px;
+  left: 186px;
   flex: 1 0 0;
   flex-flow: row wrap;
   max-width: 860px;
-  max-width: 450px;
+  max-width: 440px;
   justify-content: space-between;
   padding: 20px 20px 0;
   padding: 20px 0 0;
