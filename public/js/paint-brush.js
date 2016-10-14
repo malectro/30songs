@@ -145,7 +145,7 @@ function handleScroll() {
       navEl.classList.remove('unpin');
     }
   } else {
-    if (y >= footerPivot) {
+    if (y && y >= footerPivot) {
       pinned = true;
       navEl.classList.add('unpin');
     }
