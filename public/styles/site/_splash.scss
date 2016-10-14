@@ -16,14 +16,30 @@
   justify-content: center;
 }
 
+.splash-header-quote {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 35px;
+  margin-left: -43px;
+  text-align: center;
+  font-family: $font-subtitle;
+  font-size: 22px;
+  color: $color-red;
+}
+
 .splash-links {
   position: relative;
   top: 70px;
+  top: 110px;
+  left: 182px;
   flex: 1 0 0;
   flex-flow: row wrap;
   max-width: 860px;
+  max-width: 450px;
   justify-content: space-between;
   padding: 20px 20px 0;
+  padding: 20px 0 0;
   color: $color-blue;
   font-family: $font-title;
   font-weight: bold;
@@ -36,6 +52,7 @@
   color: $color-red;
 }
 
+/*
 .splash-link-about {
   position: relative;
   left: 19px;
@@ -48,6 +65,7 @@
   position: relative;
   right: 74px;
 }
+*/
 
 .splash-header-social {
   position: absolute;
@@ -174,8 +192,13 @@
   .splash-header-social {
     display: none;
   }
+  .splash-header-quote {
+    display: none;
+  }
   .splash-links {
     position: static;
+    padding: 20px 20px 0;
+    max-width: 860px;
   }
   .splash-links a {
     position: static;

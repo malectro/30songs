@@ -206,14 +206,29 @@ nav.main-nav {
   align-self: stretch;
   justify-content: center; }
 
+.splash-header-quote {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 35px;
+  margin-left: -43px;
+  text-align: center;
+  font-family: Futura, "Helvetica Neue", Arial, sans-serif;
+  font-size: 22px;
+  color: #EF4123; }
+
 .splash-links {
   position: relative;
   top: 70px;
+  top: 110px;
+  left: 182px;
   flex: 1 0 0;
   flex-flow: row wrap;
   max-width: 860px;
+  max-width: 450px;
   justify-content: space-between;
   padding: 20px 20px 0;
+  padding: 20px 0 0;
   color: #00344D;
   font-family: "Teko", sans-serif;
   font-weight: bold;
@@ -224,18 +239,20 @@ nav.main-nav {
 .splash-links a:hover {
   color: #EF4123; }
 
+/*
 .splash-link-about {
   position: relative;
-  left: 19px; }
-
+  left: 19px;
+}
 .splash-link-register {
   position: relative;
-  left: 56px; }
-
+  left: 56px;
+}
 .splash-link-masthead {
   position: relative;
-  right: 74px; }
-
+  right: 74px;
+}
+*/
 .splash-header-social {
   position: absolute;
   top: 10px;
@@ -344,8 +361,12 @@ nav.main-nav {
 @media (max-width: 900px) {
   .splash-header-social {
     display: none; }
+  .splash-header-quote {
+    display: none; }
   .splash-links {
-    position: static; }
+    position: static;
+    padding: 20px 20px 0;
+    max-width: 860px; }
   .splash-links a {
     position: static; }
   .splash-logo {
