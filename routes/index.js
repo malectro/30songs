@@ -23,7 +23,9 @@ var middleware = require('./middleware');
 var importRoutes = keystone.importer(__dirname);
 
 // Common Middleware
-keystone.pre('routes', middleware.initCache);
+if (process.env.NODE_ENV === 'production') {
+  keystone.pre('routes', middleware.initCache);
+}
 keystone.pre('routes', middleware.initErrorHandlers);
 keystone.pre('routes', middleware.initLocals);
 //keystone.pre('render', middleware.flashMessages);
@@ -37,7 +39,7 @@ var routes = {
 exports = module.exports = function (app) {
 	// Views
 	app.get('/', routes.views.index);
-  app.get('/chfgiejf84jf92jfk/jets', routes.views.jets);
+  app.get('/jets', routes.views.jets);
   app.get('/:number', routes.views.song);
   app.get('/:slug', routes.views.page);
 

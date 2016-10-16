@@ -44,8 +44,8 @@
 .start-game {
   position: relative;
 }
-.start-game img {
-  width: 100%;
+.start-game:hover {
+  opacity: 0.8;
 }
 .song-game {
   min-height: 600px;
@@ -146,4 +146,15 @@ img.song-image {
 
 .game {
   flex-flow: column;
+  align-items: center;
 }
+.game .song-game {
+  margin-top: 20px;
+}
+.game .loading {
+  margin-top: 20px;
+}
+.game .instructions {
+  margin-top: 20px;
+}
+

@@ -17,11 +17,6 @@ block content
     h2.song-artist= song.artist
     h1.song-title= song.title
 
-    if song.gamePath
-      a.start-game(href='/jets')
-        img(src=asset('/images/start-game.png'))
-    //iframe.song-game(src=asset('/el-vy/index.html') frameborder=0)
-
     if song.youtubeId
       iframe.song-video(src='https://www.youtube.com/embed/'+song.youtubeId height=340 frameborder=0)
     if song.spotifyUrl
@@ -37,6 +32,12 @@ block content
         .song-bio.box!= song.bio.html
 
       .song-info-col2
+        if song.gamePath
+          div
+            a.start-game(href='/jets')
+              img(src=asset('/images/jets.jpeg'))
+        //iframe.song-game(src=asset('/el-vy/index.html') frameborder=0)
+
         .song-quote!= song.quote.html
 
         .song-lyrics-label Lyrics
