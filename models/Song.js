@@ -6,10 +6,12 @@ var Types = keystone.Field.Types;
 var Song = new keystone.List('Song', {
   map: {name: 'title'},
   autokey: {path: 'slug', from: 'number', unique: true},
+  defaultSort: 'number',
 });
 
 Song.add({
   title: {type: String, required: true},
+  day: {type: Number, required: true, initial: true},
   number: {type: Number, required: true, initial: true},
   artist: {type: String, required: true, initial: true},
   youtubeUrl: {type: Types.Url},
@@ -34,6 +36,6 @@ Song.add({
   state: {type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true},
 });
 
-Song.defaultColumns = 'number, title, artist';
+Song.defaultColumns = 'day, number, title, artist';
 Song.register();
 
