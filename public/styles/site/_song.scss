@@ -12,7 +12,7 @@
   margin: 0;
 }
 
-.song-artist, .song-title {
+.song-artist, .song-title, .game-artist, .game-song {
   min-width: 0;
   font-family: $font-title;
   font-weight: 800;
@@ -22,13 +22,13 @@
   overflow-wrap: break-word;
 }
 
-.song-artist {
+.song-artist, .game-artist {
   text-transform: uppercase;
   color: $color-red;
   margin: 0;
 }
 
-.song-title {
+.song-title, .game-song {
   margin: 0;
   font-style: italic;
   line-height: 0.8;
@@ -155,6 +155,8 @@ img.song-image {
   margin-top: 20px;
 }
 .game .instructions {
-  margin-top: 20px;
+  display: block;
+  margin: 20px 0 0;
+  text-align: center;
 }
 
