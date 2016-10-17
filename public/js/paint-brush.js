@@ -151,6 +151,8 @@ function handleScroll() {
     }
   }
 }
-window.addEventListener('scroll', handleScroll);
-handleScroll();
+if (navEl) {
+  window.addEventListener('scroll', handleScroll);
+  handleScroll();
+}
 
