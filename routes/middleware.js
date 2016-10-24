@@ -62,6 +62,17 @@ exports.initLocals = function (req, res, next) {
     locals.songs = req.user ? songs : publicSongs;
     locals.latestSong = _.last(songs);
     locals.aboutText = (aboutPage && aboutPage.description) || '30 days 30 songs is a playlist of songs written and recorded by musicians for a Trump-free America.';
+    locals.maxCount = (count => {
+      for (let max = 30; max < 70; max += 10) {
+        if (count < max + 1) {
+          return max;
+        }
+      }
+
+      return 70;
+    })(publicSongs.length);
+    locals.logoSuffix = locals.maxCount === 30 ? '' : `-${locals.maxCount}`;
+
     next();
 
   }).catch(error => {
